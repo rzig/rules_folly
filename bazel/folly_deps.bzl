@@ -113,11 +113,11 @@ glog_library(with_gflags = {})
     # HttpProxy implementation as it was dependent on Boost.Beast.
     # PS: Use of git_repository is discouraged. Ref:
     # https://docs.bazel.build/versions/main/external.html#repository-rules
-    rules_boost_commit = "fb9f3c9a6011f966200027843d894923ebc9cd0b"
+    rules_boost_commit = "5d04542e52164931841d06d5a6b3fd2f43c436d0"
     maybe(
         http_archive,
         name = "com_github_nelhage_rules_boost",
-        sha256 = "046f774b185436d506efeef8be6979f2c22f1971bfebd0979bafa28088bf28d0",
+        sha256 = "6c15542d0d3b6f47cd4d2a1632a3054a0502b5102e471b4453354312cb474407",
         strip_prefix = "rules_boost-{}".format(rules_boost_commit),
         urls = [
             "https://github.com/nelhage/rules_boost/archive/{}.tar.gz".format(rules_boost_commit),
