@@ -267,7 +267,7 @@ def folly_library(
         "-Wno-unused",
         "-Wunused-label",
         "-Wunused-result",
-        "-Wshadow-compatible-local",
+        "-Wshadow-uncaptured-local",
         "-Wno-noexcept-type",
     ]
 
@@ -286,6 +286,7 @@ def folly_library(
             "-pthread",
             "-ldl",
             "-lstdc++fs",
+            "-latomic"
         ],
         # if (FOLLY_STDLIB_LIBSTDCXX AND NOT FOLLY_STDLIB_LIBSTDCXX_GE_9)
         # list (APPEND CMAKE_REQUIRED_LIBRARIES stdc++fs)
