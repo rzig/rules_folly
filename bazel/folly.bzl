@@ -199,8 +199,8 @@ def folly_library(
 
     # Note(storypku):
     total_defs = _dict_union(common_defs, {
-        "@FOLLY_USE_LIBSTDCPP@": "1",
-        "@FOLLY_USE_LIBCPP@": "0",
+        "@FOLLY_USE_LIBSTDCPP@": "0",
+        "@FOLLY_USE_LIBCPP@": "1",
         "@FOLLY_HAVE_LIBGFLAGS@": str(with_gflags),
         "@FOLLY_UNUSUAL_GFLAGS_NAMESPACE@": "0",
         "@FOLLY_GFLAGS_NAMESPACE@": "gflags",
