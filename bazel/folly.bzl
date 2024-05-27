@@ -57,6 +57,7 @@ def folly_library(
         "folly/test/**/*.cpp",
         "folly/**/test/**/*.cpp",
         "folly/**/*Test.cpp",
+        "folly/experimental/exception_tracer/**/*.cpp",
         "folly/experimental/JSONSchemaTester.cpp",
         "folly/experimental/io/HugePageUtil.cpp",
         "folly/experimental/io/IoUringEventBaseLocal.cpp",
