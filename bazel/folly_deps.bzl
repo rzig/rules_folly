@@ -154,7 +154,7 @@ glog_library(with_gflags = {})
     #    urls = ["https://github.com/google/boringssl/archive/b3d98af9c80643b0a36d495693cc0e669181c0af.tar.gz"],
     # )
     # TODO(storypku): Ref: https://github.com/google/glog/blob/master/bazel/glog.bzl
-    folly_version = "2021.09.06.00"
+    folly_version = "2024.05.20.00"
     http_archive(
         name = "folly",
         # build_file = "@com_github_figurerobotics_rules_folly//third_party/folly:folly.BUILD",
@@ -164,7 +164,7 @@ package(default_visibility = ["//visibility:public"])
 folly_library(with_gflags = {})
 """.format(with_gflags),
         strip_prefix = "folly-{}".format(folly_version),
-        sha256 = "8fb0a5392cbf6da1233c59933fff880dd77bbe61e0e2d578347ff436c776eda5",
+        sha256 = "0c3aa3c5e0c0e152ce4c54976bd89092d1f94f1c99e95d0b04b90af4feee40e9",
         urls = [
             "https://github.com/facebook/folly/archive/v{}.tar.gz".format(folly_version),
         ],

@@ -42,6 +42,8 @@ def folly_library(
         "folly/build/**",
         "folly/logging/example/**",
         "folly/tools/**",
+        "folly/**/tool/**",
+        "folly/docs/examples/**",
     ]
 
     hdrs = native.glob(["folly/**/*.h"], exclude = common_excludes + [
@@ -57,10 +59,9 @@ def folly_library(
         "folly/**/*Test.cpp",
         "folly/experimental/JSONSchemaTester.cpp",
         "folly/experimental/io/HugePageUtil.cpp",
-        "folly/python/error.cpp",
-        "folly/python/executor.cpp",
-        "folly/python/fibers.cpp",
-        "folly/python/GILAwareManualExecutor.cpp",
+        "folly/experimental/io/IoUringEventBaseLocal.cpp",
+        "folly/experimental/io/AsyncIoUringSocket.cpp",
+        "folly/python/**/*.cpp",
         "folly/cybld/folly/executor.cpp",
         "folly/experimental/symbolizer/Addr2Line.cpp",
     ])
@@ -131,10 +132,12 @@ def folly_library(
         hdrs_excludes = hdrs_excludes + [
             "folly/experimental/io/IoUring.h",
             "folly/experimental/io/IoUringBackend.h",
+            "folly/experimental/io/IoUringEvent.h",
         ]
         srcs_excludes = srcs_excludes + [
             "folly/experimental/io/IoUring.cpp",
             "folly/experimental/io/IoUringBackend.cpp",
+            "folly/experimental/io/IoUringEvent.cpp",
         ]
     if with_libaio == 0 and with_liburing == 0:
         hdrs_excludes = hdrs_excludes + [
@@ -318,6 +321,7 @@ def folly_library(
             "@boost//:variant",
             "@com_github_google_glog//:glog",
             "@com_github_google_snappy//:snappy",
+            "@com_google_googletest//:gtest",
             "@com_github_libevent_libevent//:libevent",
             "@com_github_fmtlib_fmt//:fmt",
             "@double-conversion//:double-conversion",
