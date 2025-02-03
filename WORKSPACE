@@ -1,4 +1,4 @@
-workspace(name = "com_github_figurerobotics_rules_folly")
+workspace(name = "com_github_rzig_rules_folly")
 
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 load("//bazel:folly_deps.bzl", "folly_deps")
