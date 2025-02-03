@@ -271,7 +271,6 @@ def folly_library(
         "-Wno-unused",
         "-Wunused-label",
         "-Wunused-result",
-        "-Wshadow-uncaptured-local",
         "-Wno-noexcept-type",
     ]
 
